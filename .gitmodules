@@ -1,6 +1,6 @@
 [submodule "Plugins/ComboGraph"]
 	path = Plugins/ComboGraph
-	url = https://github.com/mklabs/ue-combo-graph
+	url = git@github.com:combo-graph/combo-graph.git
 [submodule "Plugins/ComboGraphTests"]
 	path = Plugins/ComboGraphTests
 	url = https://github.com/mklabs/ComboGraphTests.git
@@ -10,3 +10,6 @@
 [submodule "Plugins/ue-xelu-icons"]
 	path = Plugins/ue-xelu-icons
 	url = https://github.com/mklabs/ue-xelu-icons.git
+[submodule "Plugins/Heart"]
+	path = Plugins/Heart
+	url = https://github.com/Drakynfly/HeartGraph
