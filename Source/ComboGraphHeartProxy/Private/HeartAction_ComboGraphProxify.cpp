@@ -22,7 +22,6 @@ void UHeartAction_ComboGraphProxify::ExecuteOnGraph(UHeartGraph* Graph, const FH
 		return;
 	}
 
-
 	/// STEP 0: Reset Proxy Graph
 
 	TArray<UHeartGraphNode*> Nodes;
@@ -77,12 +76,12 @@ void UHeartAction_ComboGraphProxify::ExecuteOnGraph(UHeartGraph* Graph, const FH
 			continue;
 		}
 
-		auto&& StartPin = ProxyGraph->GetNode(*StartProxy)->GetPinByName("Outputs");
-		auto&& EndPin = ProxyGraph->GetNode(*EndProxy)->GetPinByName("Inputs");
+		auto&& Node1 = ProxyGraph->GetNode(*StartProxy);
+		auto&& Node2 = ProxyGraph->GetNode(*EndProxy);
 
-		if (StartPin && EndPin)
-		{
-			StartPin->ConnectTo(EndPin);
-		}
+		auto&& StartPin = Node1->GetPinByName("Outputs");
+		auto&& EndPin = Node2->GetPinByName("Inputs");
+
+		Graph->ConnectPins({Node1->GetGuid(), StartPin}, {Node2->GetGuid(), EndPin});
 	}
 }

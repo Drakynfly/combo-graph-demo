@@ -15,5 +15,6 @@ class COMBOGRAPHHEARTPROXY_API UHeartGraphNode_ComboProxy : public UHeartGraphNo
 
 public:
 	virtual FText GetNodeTitle_Implementation(const UObject* Node, EHeartNodeNameContext Context) const override;
+	virtual FText GetNodeCategory_Implementation(const UObject* Node) const override;
 	virtual bool CanCreate_Implementation() const override;
 };

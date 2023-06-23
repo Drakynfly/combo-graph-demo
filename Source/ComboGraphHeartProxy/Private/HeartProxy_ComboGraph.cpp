@@ -11,7 +11,7 @@
 UHeartProxy_ComboGraph::UHeartProxy_ComboGraph()
 {
 #if WITH_EDITOR
-	GetHeartGraphSparseClassData()->CanCreateAssetFromFactory = true;
+	EditorData.CanCreateAssetFromFactory = true;
 #endif
 }
 

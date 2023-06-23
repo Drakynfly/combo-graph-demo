@@ -10,7 +10,10 @@ public class ComboGraphHeartProxy : ModuleRules
             new string[]
             {
                 "Core",
-                "Heart", "HeartCore", "HeartCanvas",
+                "Heart",
+                "HeartCore",
+                "HeartCanvas",
+                "GameplayTags",
                 "ComboGraph"
             }
         );
